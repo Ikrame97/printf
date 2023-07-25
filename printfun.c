@@ -9,16 +9,16 @@
  */
 int print_char(va_list ap, params_t *params)
 {
-	char pad_char = ' ';
-	unsigned int pad = 1, sum = 0, ch = va_arg(ap, int);
+	char padchar = ' ';
+	unsigned int pd = 1, sm = 0, ch = va_arg(ap, int);
 
 	if (params->minus_flag)
-		sum += _putchar(ch);
-	while (pad++ < params->width)
-		sum += _putchar(pad_char);
+		sm += _putchar(ch);
+	while (pd++ < params->width)
+		sm += _putchar(padchar);
 	if (!params->minus_flag)
-		sum += _putchar(ch);
-	return (sum);
+		sm += _putchar(ch);
+	return (sm);
 }
 
 /**
@@ -30,15 +30,15 @@ int print_char(va_list ap, params_t *params)
  */
 int print_int(va_list ap, params_t *params)
 {
-	long l;
+	long g;
 
-	if (params->l_modifier)
-		l = va_arg(ap, long);
+	if (params->g_modifier)
+		g = va_arg(ap, long);
 	else if (params->h_modifier)
-		l = (short int)va_arg(ap, int);
+		g = (short int)va_arg(ap, int);
 	else
-		l = (int)va_arg(ap, int);
-	return (print_number(convert(l, 10, 0, params), params));
+		g = (int)va_arg(ap, int);
+	return (print_number(convert(g, 10, 0, params), params));
 }
 
 /**
@@ -51,36 +51,36 @@ int print_int(va_list ap, params_t *params)
 int print_string(va_list ap, params_t *params)
 {
 	char *str = va_arg(ap, char *), pad_char = ' ';
-	unsigned int pad = 0, sum = 0, y = 0, x;
+	unsigned int pd = 0, sm = 0, y = 0, x;
 
 	(void)params;
 	switch ((int)(!str))
 		case 1:
 			str = NULL_STRING;
 
-	x = pad = _strlen(str);
-	if (params->precision < pad)
-		x = pad = params->precision;
+	x = pd = _strlen(str);
+	if (params->precision < pd)
+		x = pd = params->precision;
 
 	if (params->minus_flag)
 	{
 		if (params->precision != UINT_MAX)
-			for (y = 0; y < pad; y++)
+			for (y = 0; y < pd; y++)
 				sum += _putchar(*str++);
 		else
-			sum += _puts(str);
+			sm += _puts(str);
 	}
 	while (x++ < params->width)
-		sum += _putchar(pad_char);
+		sm += _putchar(pad_char);
 	if (!params->minus_flag)
 	{
 		if (params->precision != UINT_MAX)
-			for (y = 0; y < pad; y++)
-				sum += _putchar(*str++);
+			for (y = 0; y < pd; y++)
+				sm += _putchar(*str++);
 		else
-			sum += _puts(str);
+			sm += _puts(str);
 	}
-	return (sum);
+	return (sm);
 }
 
 /**
@@ -106,27 +106,27 @@ int print_percent(va_list ap, params_t *params)
  */
 int print_S(va_list ap, params_t *params)
 {
-	char *str = va_arg(ap, char *);
-	char *hex;
-	int sum = 0;
+	char *st = va_arg(ap, char *);
+	char *hx;
+	int sm = 0;
 
-	if ((int)(!str))
+	if ((int)(!st))
 		return (_puts(NULL_STRING));
-	for (; *str; str++)
+	for (; *st; st++)
 	{
-		if ((*str > 0 && *str < 32) || *str >= 127)
+		if ((*st > 0 && *st < 32) || *st >= 127)
 		{
-			sum += _putchar('\\');
-			sum += _putchar('x');
-			hex = convert(*str, 16, 0, params);
-			if (!hex[1])
-				sum += _putchar('0');
-			sum += _puts(hex);
+			sm += _putchar('\\');
+			sm += _putchar('x');
+			hx = convert(*st, 16, 0, params);
+			if (!hx[1])
+				sm += _putchar('0');
+			sm += _puts(hx);
 		}
 		else
 		{
-			sum += _putchar(*str);
+			sm += _putchar(*st);
 		}
 	}
-	return (sum);
+	return (sm);
 }
