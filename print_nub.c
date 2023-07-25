@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _isdigit - checks if character is digit
- * @c: the character to check
+ * _isdigit - prints if the character isdigit
+ * @c: the char to prints
  *
  * Return: 1 if digit, 0 otherwise
  */
@@ -12,8 +12,8 @@ int _isdigit(int c)
 }
 
 /**
- * _strlen - returns the length of a string
- * @s: the string whose length to check
+ * _strlen - check the string number
+ * @s: the string whose to print and check
  *
  * Return: integer length of string
  */
@@ -27,9 +27,9 @@ int _strlen(char *s)
 }
 
 /**
- * print_number - prints a number with options
- * @str: the base number as a string
- * @params: the parameter struct
+ * print_number - checkers a string number
+ * @str: the number string whose check
+ * @params: calculates the params struct
  *
  * Return: chars printed
  */
@@ -58,9 +58,9 @@ int print_number(char *str, params_t *params)
 }
 
 /**
- * print_number_right_shift - prints a number with options
- * @str: the base number as a string
- * @params: the parameter struct
+ * print_number_right_shift - checks a number right shift
+ * @str: the number string whose print
+ * @params: get the params struct
  *
  * Return: chars printed
  */
@@ -100,9 +100,9 @@ int print_number_right_shift(char *str, params_t *params)
 }
 
 /**
- * print_number_left_shift - prints a number with options
- * @str: the base number as a string
- * @params: the parameter struct
+ * print_number_left_shift - prints a numb left shift
+ * @str: the numb string whose print
+ * @params: get the params struct
  *
  * Return: chars printed
  */

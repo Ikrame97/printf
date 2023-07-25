@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * init_params - clears struct fields and reset buf
- * @params: the parameters struct
- * @ap: the argument pointer
+ * init_params - buffer array to handle params
+ * @params: list a of parameters
+ * @ap: the argument pointer specifier
  *
  * Return: void
  */

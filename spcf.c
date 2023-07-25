@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * get_specifier - finds the format func
- * @s: the format string
+ * get_specifier - checks the function specifier
+ * @s: the string function
  *
  * Return: the number of bytes printed
  */
@@ -39,10 +39,10 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 }
 
 /**
- * get_print_func - finds the format func
- * @s: the format string
- * @ap: argument pointer
- * @params: the parameters struct
+ * get_print_func - checks and prints the function
+ * @s: the string function
+ * @ap: calculates the argument pointer
+ * @params: get the params struct
  *
  * Return: the number of bytes printed
  */
@@ -56,9 +56,9 @@ int get_print_func(char *s, va_list ap, params_t *params)
 }
 
 /**
- * get_flag - finds the flag func
- * @s: the format string
- * @params: the parameters struct
+ * get_flag - printss the flag function
+ * @s: the string function
+ * @params: get the params struct
  *
  * Return: if flag was valid
  */
@@ -88,9 +88,9 @@ int get_flag(char *s, params_t *params)
 }
 
 /**
- * get_modifier - finds the modifier func
- * @s: the format string
- * @params: the parameters struct
+ * get_modifier - checks the function modifier
+ * @s: the string function
+ * @params: get the params struct
  *
  * Return: if modifier was valid
  */
@@ -111,10 +111,10 @@ int get_modifier(char *s, params_t *params)
 }
 
 /**
- * get_width - gets the width from the format string
- * @s: the format string
- * @params: the parameters struct
- * @ap: the argument pointer
+ * get_width - prints the width string function
+ * @s: the string funtion
+ * @params: calculates the params struct
+ * @ap: get the argument pointer
  *
  * Return: new pointer
  */
