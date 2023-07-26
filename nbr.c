@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * convert - èiyjoiopyhjpotkôkj
- * @num: nbr
- * @base: bbgju
- * @flags: jèkjpokytjk
- * @params: uyrfuhyhtgrf
+ * convert - converter function, a clone of itoa
+ * @num: number
+ * @base: base
+ * @flags: argument flags
+ * @params: paramater struct
  *
  * Return: string
  */
@@ -62,9 +62,9 @@ int print_unsigned(va_list ap, params_t *params)
 
 
 /**
- * print_address - uyujuntyujtd
- * @ap: klnhjoln
- * @params: htpoktjthe parameters struct
+ * print_address - prints address
+ * @ap: argument pointer
+ * @params: the parameters struct
  *
  * Return: bytes printed
  */
