@@ -1,2 +1,3 @@
 hello we are in printf project from alx
-Write a function that pr ui.
+Write a function tha
+r ui.
