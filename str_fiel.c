@@ -6,7 +6,7 @@
  * @params: calculates the params struct
  * @ap: get the argument pointer
  *
- * Return: new pointer
+ * Return: jgfj
  */
 char *get_precision(char *p, params_t *params, va_list ap)
 {

@@ -4,7 +4,7 @@
  * _printf - checks anything
  * @format: jyyyyyyyyyyyyyyrg
  *
- * Return: number of bytes printed
+ * Return: print nbr 
  */
 int _printf(const char *format, ...)
 {

@@ -5,7 +5,7 @@
  * @ap: argument pointer
  * @params: the parameters struct
  *
- * Return: number chars printed
+ * Return: print nbr
  */
 int print_char(va_list ap, params_t *params)
 {
@@ -26,7 +26,7 @@ int print_char(va_list ap, params_t *params)
  * @ap: argument pointer
  * @params: the parameters struct
  *
- * Return: number chars printed
+ * Return: priny nbr
  */
 int print_int(va_list ap, params_t *params)
 {
@@ -46,7 +46,7 @@ int print_int(va_list ap, params_t *params)
  * @ap: argument pointer
  * @params: the parameters struct
  *
- * Return: number chars printed
+ * Return: print char
  */
 int print_string(va_list ap, params_t *params)
 {
@@ -85,10 +85,10 @@ int print_string(va_list ap, params_t *params)
 
 /**
  * print_percent - prints string
- * @ap: argument pointer
- * @params: the parameters struct
+ * @ap: had argument pointer
+ * @params: get the parameters struct
  *
- * Return: number chars printed
+ * Return: print char
  */
 int print_percent(va_list ap, params_t *params)
 {
@@ -99,10 +99,10 @@ int print_percent(va_list ap, params_t *params)
 
 /**
  * print_S - custom format specifier
- * @ap: argument pointer
- * @params: the parameters struct
+ * @ap: had argument pointer
+ * @params: get the parameters struct
  *
- * Return: number chars printed
+ * Return: print nbr
  */
 int print_S(va_list ap, params_t *params)
 {

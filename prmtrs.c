@@ -5,7 +5,7 @@
  * @params: list a of parameters
  * @ap: the argument pointer specifier
  *
- * Return: void
+ * Return: rlogl
  */
 void init_params(params_t *params, va_list ap)
 {

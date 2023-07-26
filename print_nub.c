@@ -15,7 +15,7 @@ int _isdigit(int c)
  * _strlen - check the string number
  * @s: the string whose to print and check
  *
- * Return: integer length of string
+ * Return: print integer
  */
 int _strlen(char *s)
 {
@@ -31,7 +31,7 @@ int _strlen(char *s)
  * @str: the number string whose check
  * @params: calculates the params struct
  *
- * Return: chars printed
+ * Return: gfrjl
  */
 int print_number(char *str, params_t *params)
 {
@@ -62,7 +62,7 @@ int print_number(char *str, params_t *params)
  * @str: the number string whose print
  * @params: get the params struct
  *
- * Return: chars printed
+ * Return: hnjgi
  */
 int print_number_right_shift(char *str, params_t *params)
 {
@@ -104,7 +104,7 @@ int print_number_right_shift(char *str, params_t *params)
  * @str: the numb string whose print
  * @params: get the params struct
  *
- * Return: chars printed
+ * Return: gfhgfh
  */
 int print_number_left_shift(char *str, params_t *params)
 {

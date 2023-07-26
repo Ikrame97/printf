@@ -6,7 +6,7 @@
  * @stop: get stop chars
  * @except: get except chars
  *
- * Return: number bytes printed
+ * Return: hytrhy
  */
 int print_from_to(char *start, char *stop, char *except)
 {
@@ -26,7 +26,7 @@ int print_from_to(char *start, char *stop, char *except)
  * @ap: a string numbers
  * @params: get the params struct
  *
- * Return: number bytes printed
+ * Return: rtjuh
  */
 int print_rev(va_list ap, params_t *params)
 {
@@ -50,7 +50,7 @@ int print_rev(va_list ap, params_t *params)
  * @ap: a string number
  * @params: get the params struct
  *
- * Return: number bytes printed
+ * Return: yhtyhn
  */
 int print_rot13(va_list ap, params_t *params)
 {

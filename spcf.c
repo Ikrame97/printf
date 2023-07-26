@@ -4,7 +4,7 @@
  * get_specifier - checks the function specifier
  * @s: the string function
  *
- * Return: the number of bytes printed
+ * Return: hghfh
  */
 int (*get_specifier(char *s))(va_list ap, params_t *params)
 {
@@ -44,7 +44,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
  * @ap: calculates the argument pointer
  * @params: get the params struct
  *
- * Return: the number of bytes printed
+ * Return: ygfuj
  */
 int get_print_func(char *s, va_list ap, params_t *params)
 {
@@ -60,7 +60,7 @@ int get_print_func(char *s, va_list ap, params_t *params)
  * @s: the string function
  * @params: get the params struct
  *
- * Return: if flag was valid
+ * Return: tfhylk
  */
 int get_flag(char *s, params_t *params)
 {
@@ -92,7 +92,7 @@ int get_flag(char *s, params_t *params)
  * @s: the string function
  * @params: get the params struct
  *
- * Return: if modifier was valid
+ * Return: jkghi
  */
 int get_modifier(char *s, params_t *params)
 {
@@ -116,7 +116,7 @@ int get_modifier(char *s, params_t *params)
  * @params: calculates the params struct
  * @ap: get the argument pointer
  *
- * Return: new pointer
+ * Return: kygjk
  */
 char *get_width(char *s, params_t *params, va_list ap)
 {

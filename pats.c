@@ -4,7 +4,7 @@
  * _puts - checks a string gtgnhhy
  * @str: thy rjrhytgeyt
  *
- * Return: void
+ * Return: thgnn
  */
 int _puts(char *str)
 {
@@ -21,7 +21,7 @@ int _puts(char *str)
  *
  *
  *
- * Return: On success 1.
+ * Return: On success print 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
 int _putchar(int c)
