@@ -39,9 +39,9 @@ char *convert(long int num, int base, int flags, params_t *params)
 }
 
 /**
- * print_unsigned - hkgthogkhhhhhhhhhhkgn
- * @ap: ajhugkfhyyyyyyyyyyyy
- * @param: ujmùjuytg
+ * print_unsigned - prints unsigned integer numbers
+ * @ap: argument pointer
+ * @params: the parameters struct
  *
  * Return: bytes printed
  */
