@@ -19,11 +19,11 @@ int _isdigit(int c)
  */
 int _strlen(char *s)
 {
-	int y = 0;
+	int z = 0;
 
 	while (*s++)
-		y++;
-	return (y);
+		z++;
+	return (z);
 }
 
 /**
@@ -35,20 +35,20 @@ int _strlen(char *s)
  */
 int print_number(char *str, params_t *params)
 {
-	unsigned int i = _strlen(str);
-	int neg = (!params->unsign && *str == '-');
+	unsigned int in = _strlen(str);
+	int ng = (!params->unsign && *str == '-');
 
 	if (!params->precision && *str == '0' && !str[1])
 		str = "";
-	if (neg)
+	if (ng)
 	{
 		str++;
-		i--;
+		in--;
 	}
 	if (params->precision != UINT_MAX)
-		while (i++ < params->precision)
+		while (in++ < params->precision)
 			*--str = '0';
-	if (neg)
+	if (ng)
 		*--str = '-';
 
 	if (!params->minus_flag)
