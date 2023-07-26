@@ -6,12 +6,7 @@
  * @base: hhhh
  * @flags: hhhhhhhhh hhhhh
  * @params: hhhhhhhhh hhhhh
- *
-<<<<<<< HEAD
- * Return: the str
-=======
  * Return: hhhhhh
->>>>>>> f81d36c160a8aaf1c82c9968e2b957830f30255d
  */
 char *convert(long int num, int base, int flags, params_t *params)
 {
