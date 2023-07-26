@@ -4,11 +4,7 @@
  * _printf - didndtsdd hhhhhhhh
  * @format: hhhhhhhhhhhhhh
  *
-<<<<<<< HEAD
- * Return: print nbr 
-=======
  * Return: hhhhhhhhhhhhhhhhhd
->>>>>>> f81d36c160a8aaf1c82c9968e2b957830f30255d
  */
 int _printf(const char *format, ...)
 {
