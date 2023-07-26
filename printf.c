@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _printf - prints anything
- * @format: the format string
+ * _printf - checks anything
+ * @format: jyyyyyyyyyyyyyyrg
  *
  * Return: number of bytes printed
  */
@@ -29,9 +29,9 @@ int _printf(const char *format, ...)
 		}
 		start = x;
 		x++;
-		while (get_flag(x, &params)) /* while char at p is flag char */
+		while (get_flag(x, &params)) /* while characters is precision */
 		{
-			x++; /* next char */
+			x++; /* char after */
 		}
 		x = get_width(x, &params, ap);
 		x = get_precision(x, &params, ap);
