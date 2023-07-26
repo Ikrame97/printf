@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _printf - checks anything
- * @format: jyyyyyyyyyyyyyyrg
+ * _printf - prints anything
+ * @format: the format string
  *
  * Return: number of bytes printed
  */
@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	int sm = 0;
 	va_list ap;
-	char *z, *start;
+	char *z, *strt;
 	params_t params = PARAMS_INIT;
 
 	va_start(ap, format);
@@ -27,12 +27,7 @@ int _printf(const char *format, ...)
 			sm += _putchar(*z);
 			continue;
 		}
-		start = x;
-		x++;
-		while (get_flag(x, &params)) /* while characters is precision */
-		{
-			x++; /* char after */
-		start = z;
+		strt = z;
 		z++;
 		while (get_flag(z, &params)) /* while char at p is flag char */
 		{
