@@ -27,19 +27,16 @@ int _printf(const char *format, ...)
 			sm += _putchar(*z);
 			continue;
 		}
-<<<<<<< HEAD
 		start = x;
 		x++;
 		while (get_flag(x, &params)) /* while characters is precision */
 		{
 			x++; /* char after */
-=======
 		start = z;
 		z++;
 		while (get_flag(z, &params)) /* while char at p is flag char */
 		{
 			z++; /* next char */
->>>>>>> e019d0d2a88eaf799fb53a59ac72dedc12a3c08d
 		}
 		z = get_width(z, &params, ap);
 		z = get_precision(z, &params, ap);
