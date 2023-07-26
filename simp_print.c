@@ -10,15 +10,15 @@
  */
 int print_from_to(char *start, char *stop, char *except)
 {
-	int sum = 0;
+	int sm = 0;
 
 	while (start <= stop)
 	{
 		if (start != except)
-			sum += _putchar(*start);
+			sm += _putchar(*start);
 		start++;
 	}
-	return (sum);
+	return (sm);
 }
 
 /**
@@ -30,19 +30,19 @@ int print_from_to(char *start, char *stop, char *except)
  */
 int print_rev(va_list ap, params_t *params)
 {
-	int len, sum = 0;
+	int ln, sm = 0;
 	char *str = va_arg(ap, char *);
 	(void)params;
 
 	if (str)
 	{
-		for (len = 0; *str; str++)
-			len++;
+		for (ln = 0; *str; str++)
+			ln++;
 		str--;
-		for (; len > 0; len--, str--)
-			sum += _putchar(*str);
+		for (; ln > 0; ln--, str--)
+			sm += _putchar(*str);
 	}
-	return (sum);
+	return (sm);
 }
 
 /**
@@ -54,26 +54,26 @@ int print_rev(va_list ap, params_t *params)
  */
 int print_rot13(va_list ap, params_t *params)
 {
-	int x, index;
-	int count = 0;
+	int i, ind;
+	int cnt = 0;
 	char arr[] =
 		"NOPQRSTUVWXYZABCDEFGHIJKLM      nopqrstuvwxyzabcdefghijklm";
 	char *a = va_arg(ap, char *);
 	(void)params;
 
-	x = 0;
-	index = 0;
-	while (a[x])
+	i = 0;
+	ind = 0;
+	while (a[i])
 	{
-		if ((a[x] >= 'A' && a[x] <= 'Z')
-		    || (a[x] >= 'a' && a[x] <= 'z'))
+		if ((a[i] >= 'A' && a[i] <= 'Z')
+		    || (a[i] >= 'a' && a[i] <= 'z'))
 		{
-			index = a[x] - 65;
-			count += _putchar(arr[index]);
+			ind = a[i] - 65;
+			count += _putchar(arr[ind]);
 		}
 		else
-			count += _putchar(a[x]);
-		x++;
+			cnt += _putchar(a[i]);
+		i++;
 	}
-	return (count);
+	return (cnt);
 }
