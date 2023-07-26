@@ -66,37 +66,37 @@ int print_number(char *str, params_t *params)
  */
 int print_number_right_shift(char *str, params_t *params)
 {
-	unsigned int x = 0, neg, neg2, y = _strlen(str);
+	unsigned int z = 0, ng, ng2, y = _strlen(str);
 	char pad_char = ' ';
 
 	if (params->zero_flag && !params->minus_flag)
 		pad_char = '0';
-	neg = neg2 = (!params->unsign && *str == '-');
-	if (neg && x < params->width && pad_char == '0' && !params->minus_flag)
+	ng = ng2 = (!params->unsign && *str == '-');
+	if (ng && x < params->width && pad_char == '0' && !params->minus_flag)
 		str++;
 	else
-		neg = 0;
-	if ((params->plus_flag && !neg2) ||
-		(!params->plus_flag && params->space_flag && !neg2))
+		ng = 0;
+	if ((params->plus_flag && !ng2) ||
+		(!params->plus_flag && params->space_flag && !ng2))
 		y++;
-	if (neg && pad_char == '0')
-		x += _putchar('-');
-	if (params->plus_flag && !neg2 && pad_char == '0' && !params->unsign)
-		x += _putchar('+');
-	else if (!params->plus_flag && params->space_flag && !neg2 &&
+	if (ng && pad_char == '0')
+		z += _putchar('-');
+	if (params->plus_flag && !ng2 && pad_char == '0' && !params->unsign)
+		z += _putchar('+');
+	else if (!params->plus_flag && params->space_flag && !ng2 &&
 		!params->unsign && params->zero_flag)
-		x += _putchar(' ');
+		z += _putchar(' ');
 	while (y++ < params->width)
-		x += _putchar(pad_char);
-	if (neg && pad_char == ' ')
-		x += _putchar('-');
-	if (params->plus_flag && !neg2 && pad_char == ' ' && !params->unsign)
-		x += _putchar('+');
-	else if (!params->plus_flag && params->space_flag && !neg2 &&
+		z += _putchar(pad_char);
+	if (ng && pad_char == ' ')
+		z += _putchar('-');
+	if (params->plus_flag && !ng2 && pad_char == ' ' && !params->unsign)
+		z += _putchar('+');
+	else if (!params->plus_flag && params->space_flag && !ng2 &&
 		!params->unsign && !params->zero_flag)
-		x += _putchar(' ');
-	x += _puts(str);
-	return (x);
+		z += _putchar(' ');
+	z += _puts(str);
+	return (z);
 }
 
 /**
