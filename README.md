@@ -1,2 +1,2 @@
 hello we are in printf project from alx
-Write a function tr ui.
+Write a functitr ui.
