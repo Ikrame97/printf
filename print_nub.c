@@ -19,11 +19,11 @@ int _isdigit(int c)
  */
 int _strlen(char *s)
 {
-	int y = 0;
+	int z = 0;
 
 	while (*s++)
-		y++;
-	return (y);
+		z++;
+	return (z);
 }
 
 /**
@@ -35,20 +35,20 @@ int _strlen(char *s)
  */
 int print_number(char *str, params_t *params)
 {
-	unsigned int i = _strlen(str);
-	int neg = (!params->unsign && *str == '-');
+	unsigned int in = _strlen(str);
+	int ng = (!params->unsign && *str == '-');
 
 	if (!params->precision && *str == '0' && !str[1])
 		str = "";
-	if (neg)
+	if (ng)
 	{
 		str++;
-		i--;
+		in--;
 	}
 	if (params->precision != UINT_MAX)
-		while (i++ < params->precision)
+		while (in++ < params->precision)
 			*--str = '0';
-	if (neg)
+	if (ng)
 		*--str = '-';
 
 	if (!params->minus_flag)
@@ -108,20 +108,20 @@ int print_number_right_shift(char *str, params_t *params)
  */
 int print_number_left_shift(char *str, params_t *params)
 {
-	unsigned int x = 0, neg, neg2, y = _strlen(str);
+	unsigned int x = 0, ng, ng2, y = _strlen(str);
 	char pad_char = ' ';
 
 	if (params->zero_flag && !params->minus_flag)
 		pad_char = '0';
-	neg = neg2 = (!params->unsign && *str == '-');
-	if (neg && x < params->width && pad_char == '0' && !params->minus_flag)
+	ng = ng2 = (!params->unsign && *str == '-');
+	if (ng && x < params->width && pad_char == '0' && !params->minus_flag)
 		str++;
 	else
-		neg = 0;
+		ng = 0;
 
-	if (params->plus_flag && !neg2 && !params->unsign)
+	if (params->plus_flag && !ng2 && !params->unsign)
 		x += _putchar('+'), y++;
-	else if (params->space_flag && !neg2 && !params->unsign)
+	else if (params->space_flag && !ng2 && !params->unsign)
 		x += _putchar(' '), y++;
 	x += _puts(str);
 	while (y++ < params->width)
