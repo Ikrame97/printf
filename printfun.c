@@ -10,15 +10,15 @@
 int print_char(va_list ap, params_t *params)
 {
 	char pad_char = ' ';
-	unsigned int pad = 1, sum = 0, ch = va_arg(ap, int);
+	unsigned int pd = 1, sm = 0, ch = va_arg(ap, int);
 
 	if (params->minus_flag)
-		sum += _putchar(ch);
-	while (pad++ < params->width)
-		sum += _putchar(pad_char);
+		sm += _putchar(ch);
+	while (pd++ < params->width)
+		sm += _putchar(pad_char);
 	if (!params->minus_flag)
-		sum += _putchar(ch);
-	return (sum);
+		sm += _putchar(ch);
+	return (sm);
 }
 
 /**
@@ -51,7 +51,7 @@ int print_int(va_list ap, params_t *params)
 int print_string(va_list ap, params_t *params)
 {
 	char *str = va_arg(ap, char *), pad_char = ' ';
-	unsigned int pad = 0, sum = 0, y = 0, x;
+	unsigned int pd = 0, sm = 0, y = 0, x;
 
 	(void)params;
 	switch ((int)(!str))
@@ -59,28 +59,28 @@ int print_string(va_list ap, params_t *params)
 			str = NULL_STRING;
 
 	x = pad = _strlen(str);
-	if (params->precision < pad)
+	if (params->precision < pd)
 		x = pad = params->precision;
 
 	if (params->minus_flag)
 	{
 		if (params->precision != UINT_MAX)
-			for (y = 0; y < pad; y++)
-				sum += _putchar(*str++);
+			for (y = 0; y < pd; y++)
+				sm += _putchar(*str++);
 		else
-			sum += _puts(str);
+			sm += _puts(str);
 	}
 	while (x++ < params->width)
-		sum += _putchar(pad_char);
+		sm += _putchar(pad_char);
 	if (!params->minus_flag)
 	{
 		if (params->precision != UINT_MAX)
-			for (y = 0; y < pad; y++)
-				sum += _putchar(*str++);
+			for (y = 0; y < pd; y++)
+				sm += _putchar(*str++);
 		else
-			sum += _puts(str);
+			sm += _puts(str);
 	}
-	return (sum);
+	return (sm);
 }
 
 /**
@@ -107,8 +107,8 @@ int print_percent(va_list ap, params_t *params)
 int print_S(va_list ap, params_t *params)
 {
 	char *str = va_arg(ap, char *);
-	char *hex;
-	int sum = 0;
+	char *hx;
+	int sm = 0;
 
 	if ((int)(!str))
 		return (_puts(NULL_STRING));
@@ -116,17 +116,17 @@ int print_S(va_list ap, params_t *params)
 	{
 		if ((*str > 0 && *str < 32) || *str >= 127)
 		{
-			sum += _putchar('\\');
-			sum += _putchar('x');
-			hex = convert(*str, 16, 0, params);
-			if (!hex[1])
-				sum += _putchar('0');
-			sum += _puts(hex);
+			sm += _putchar('\\');
+			sm += _putchar('x');
+			hx = convert(*str, 16, 0, params);
+			if (!hx[1])
+				sm += _putchar('0');
+			sm += _puts(hx);
 		}
 		else
 		{
-			sum += _putchar(*str);
+			sm += _putchar(*str);
 		}
 	}
-	return (sum);
+	return (sm);
 }
