@@ -58,9 +58,9 @@ int print_string(va_list ap, params_t *params)
 		case 1:
 			str = NULL_STRING;
 
-	x = pad = _strlen(str);
+	x = pd = _strlen(str);
 	if (params->precision < pd)
-		x = pad = params->precision;
+		x = pd = params->precision;
 
 	if (params->minus_flag)
 	{
